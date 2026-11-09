@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Two BONES-SEED motion references for inspecting box relocation and crate carrying, shown as SOMA and G1 pose replays.">
+  <title>BONES-SEED · Motion browser</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top"><span class="mark" aria-hidden="true">B</span> Motion browser <span class="edition">BONES-SEED</span></a>
+    <a class="text-link" href="https://seed-viewer.bones.studio/" target="_blank" rel="noopener noreferrer">Official dataset viewer ↗</a>
+  </header>
+  <main id="top">
+    <section class="intro" aria-labelledby="heading">
+      <p class="eyebrow">REFERENCE MOTIONS / TWO CATEGORY SAMPLES</p>
+      <h1>Look at the motion.<br><span>Choose what to build.</span></h1>
+      <p class="lede">Inspect a box-relocation motion and a crate-carrying motion. Each video pairs the human SOMA skeleton with its G1 retarget.</p>
+      <nav class="categories" aria-label="Motion categories">
+        <a href="#manipulation">Object Manipulation <span>01</span></a>
+        <a href="#interaction">Object Interaction <span>01</span></a>
+      </nav>
+      <aside class="scope"><span class="scope-dot" aria-hidden="true"></span><p>These are pose replays, not camera footage or controller executions. Objects are not reconstructed in these previews.</p></aside>
+    </section>
+
+    <section class="clip" id="manipulation" aria-labelledby="box-heading">
+      <div class="clip-heading"><div><p class="eyebrow">01 / OBJECT MANIPULATION</p><h2 id="box-heading">Box relocation</h2></div><span class="duration">5.88 s · 60 fps</span></div>
+      <div class="player"><video controls playsinline preload="metadata" poster="media/box_lift.jpg" aria-label="SOMA human skeleton and G1 reference performing a low-to-low box-relocation motion"><source src="media/box_lift.mp4" type="video/mp4">Your browser does not support embedded video. <a href="media/box_lift.mp4">Open the MP4.</a></video></div>
+      <div class="clip-meta"><p>Human skeleton <span>left</span> / G1 reference <span>right</span></p><a href="media/box_lift.mp4" download>Download preview ↓</a></div>
+      <details><summary>Clip identity &amp; provenance</summary><p class="clip-id">medium_big_light_two_hands_front_low_to_front_low_R_001__A530</p><p>706 reference frames at nominal 120 Hz; displayed every second source frame. Category confirmed from the official per-clip metadata. No added object model, interpolation, or physics stepping.</p><p>The source annotations differ on ground versus low-shelf support. This preview does not resolve the original support geometry.</p></details>
+    </section>
+
+    <section class="clip" id="interaction" aria-labelledby="crate-heading">
+      <div class="clip-heading"><div><p class="eyebrow">02 / OBJECT INTERACTION</p><h2 id="crate-heading">Crate carry</h2></div><span class="duration">11.98 s · 60 fps</span></div>
+      <div class="player"><video controls playsinline preload="metadata" poster="media/crate_carry.jpg" aria-label="SOMA human skeleton and G1 reference performing a crate-carrying walk"><source src="media/crate_carry.mp4" type="video/mp4">Your browser does not support embedded video. <a href="media/crate_carry.mp4">Open the MP4.</a></video></div>
+      <div class="clip-meta"><p>Human skeleton <span>left</span> / G1 reference <span>right</span></p><a href="media/crate_carry.mp4" download>Download preview ↓</a></div>
+      <details><summary>Clip identity &amp; provenance</summary><p class="clip-id">lift_crate_walk_ff_loop_225_R_001__A202</p><p>1,437 reference frames at nominal 120 Hz; displayed every second source frame. Category confirmed from the official per-clip metadata. The source describes walking while carrying a crate; no crate geometry is added.</p><p>The final sampled pose is displayed for one 60 Hz frame. For this odd-length interval, encoded duration exceeds the nominal source interval by 1/120 second.</p></details>
+    </section>
+
+    <section class="more"><div><p class="eyebrow">KEEP EXPLORING</p><h2>Browse the full release</h2><p>This gallery contains two selected previews, not the complete category catalog.</p></div><a class="button" href="https://seed-viewer.bones.studio/" target="_blank" rel="noopener noreferrer">Open official viewer ↗</a></section>
+  </main>
+  <footer><p><a href="https://bones.studio/">Motion Data by Bones Studio</a></p><p><a href="https://huggingface.co/datasets/bones-studio/seed">Dataset documentation</a><span>·</span><a href="https://bones.studio/info/seed-license">Dataset license</a></p><p class="fine-print">Research reference previews. Raw motion files and dataset archives are not included.</p></footer>
+</body>
+</html>
